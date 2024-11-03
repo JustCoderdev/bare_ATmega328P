@@ -1,0 +1,9 @@
+bin/
+build*/
+
+.old_session.vim
+.session.vim
+
+.ldcache
+ldcache
+
