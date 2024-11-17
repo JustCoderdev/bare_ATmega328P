@@ -3,18 +3,21 @@
 /* IO Pins
  * -------------------------------- */
 
-__inline bool reg_read_(reg address, byte position)
+__inline bool reg_read_(reg* address, byte position)
 {
+	/* TODO: assert */
 	return ((*address & (1 << position)) >> position);
 }
 
-__inline void reg_write_1_(reg address, byte position)
+__inline void reg_write_1_(reg* address, byte position)
 {
+	/* TODO: assert */
 	*address |= (1 << position);
 }
 
-__inline void reg_write_0_(reg address, byte position)
+__inline void reg_write_0_(reg* address, byte position)
 {
+	/* TODO: assert */
 	*address &= ~(1 << position);
 }
 
